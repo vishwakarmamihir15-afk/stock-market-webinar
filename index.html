@@ -185,13 +185,10 @@
                             <text x="5" y="90" fill="#10b981" font-size="8" font-family="monospace">STRONG SUPPORT ZONE</text>
                             
                             <!-- Candlesticks -->
-                            <!-- Red candles -->
                             <line x1="30" y1="20" x2="30" y2="55" stroke="#ef4444" stroke-width="1.5"/><rect x="26" y="26" width="8" height="22" fill="#ef4444" rx="1"/>
                             <line x1="55" y1="35" x2="55" y2="75" stroke="#ef4444" stroke-width="1.5"/><rect x="51" y="42" width="8" height="26" fill="#ef4444" rx="1"/>
                             <line x1="80" y1="55" x2="80" y2="92" stroke="#ef4444" stroke-width="1.5"/><rect x="76" y="62" width="8" height="24" fill="#ef4444" rx="1"/>
-                            <!-- Rejection Hammer -->
                             <line x1="110" y1="68" x2="110" y2="98" stroke="#10b981" stroke-width="1.5"/><rect x="106" y="70" width="8" height="10" fill="#10b981" rx="1"/>
-                            <!-- Green Breakout Candles -->
                             <line x1="140" y1="52" x2="140" y2="80" stroke="#10b981" stroke-width="1.5"/><rect x="136" y="56" width="8" height="18" fill="#10b981" rx="1"/>
                             <line x1="170" y1="38" x2="170" y2="65" stroke="#10b981" stroke-width="1.5"/><rect x="166" y="42" width="8" height="18" fill="#10b981" rx="1"/>
                             <line x1="200" y1="45" x2="200" y2="62" stroke="#ef4444" stroke-width="1.5"/><rect x="196" y="47" width="8" height="10" fill="#ef4444" rx="1"/>
@@ -377,7 +374,7 @@
                 Free Action-Taker Bonuses
             </span>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Aaj Register Karne Par ₹2,499 Ke Tools Bilkul FREE!</h2>
-            <p class="text-gray-400 text-sm sm:text-base mt-2">Jaise hi aap apni ₹99 seat book karenge, yeh 3 practical tools aapko turant mil jayenge.</p>
+            <p class="text-gray-400 text-sm sm:text-base mt-2">Jaise hi aap apni ₹99 seat book karenge, yeh 3 practical tools aapko payment verification ke baad mil jayenge.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -423,7 +420,7 @@
     </section>
 
     <!-- =====================================================================
-         6. INTERACTIVE REGISTRATION & UPI PAYMENT SECTION
+         6. INTERACTIVE REGISTRATION & DIRECT CASHFREE PAYMENT SECTION
          ===================================================================== -->
     <section id="register-section" class="py-16 px-4 bg-gradient-to-b from-gray-900/60 to-[#0a0e17] border-t border-gray-800">
         <div class="max-w-4xl mx-auto">
@@ -433,10 +430,10 @@
                 <div id="step-registration">
                     <div class="text-center mb-8">
                         <span class="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-                            Step 1 of 2 — Seat Reservation
+                            Instant Seat Booking — ₹99
                         </span>
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">Apni Live Masterclass Seat Reserve Karein</h2>
-                        <p class="text-gray-400 text-sm mt-1">Neeche apni details bharein — Zoom link aur Free Bonuses isi WhatsApp & Email par bheje jayenge.</p>
+                        <p class="text-gray-400 text-sm mt-1">Neeche apni details bharein aur Pay ₹99 par click karein — aap seedha secure Cashfree payment page par pahunch jayenge.</p>
                     </div>
 
                     <form id="booking-form" class="space-y-5 max-w-xl mx-auto">
@@ -482,7 +479,7 @@
                         <div class="bg-gray-950 border border-gray-800 rounded-xl p-4 flex items-center justify-between">
                             <div>
                                 <p class="text-sm font-bold text-white">2-Hour Live Masterclass + 3 Bonuses</p>
-                                <p class="text-xs text-emerald-400">Includes Personal Q&A Session</p>
+                                <p class="text-xs text-emerald-400">Direct Cashfree Secure Checkout</p>
                             </div>
                             <div class="text-right">
                                 <span class="text-xs text-gray-500 line-through block">₹999</span>
@@ -492,100 +489,56 @@
 
                         <div id="form-error-msg" class="hidden text-red-400 text-xs bg-red-950/50 border border-red-500/30 p-3 rounded-lg"></div>
 
-                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-gray-950 font-extrabold text-base sm:text-lg shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
-                            <span>Proceed to Pay ₹99 & Confirm Seat</span>
-                            <i class="fa-solid fa-lock text-sm"></i>
+                        <button type="submit" id="proceed-pay-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-gray-950 font-extrabold text-base sm:text-lg shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <span>Pay ₹99 &amp; Confirm Seat</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                         </button>
                     </form>
                 </div>
 
-                <!-- STEP 2: UPI PAYMENT SCREEN -->
-                <div id="step-payment" class="hidden max-w-lg mx-auto text-center">
-                    <span class="px-3 py-1 rounded-full bg-amber-500/15 text-amber-400 text-xs font-bold uppercase tracking-wider">
-                        Step 2 of 2 — Instant UPI Payment
-                    </span>
-                    <h3 class="text-2xl font-extrabold text-white mt-3">Scan & Pay ₹99 via Any UPI App</h3>
-                    <p class="text-gray-400 text-xs sm:text-sm mt-1">GPay, PhonePe, Paytm ya BHIM UPI se ₹99 pay karke neeche 12-digit UTR / Ref ID dalein.</p>
-
-                    <!-- Dynamic QR Code Card -->
-                    <div class="bg-white rounded-2xl p-5 my-6 inline-block shadow-xl">
-                        <!-- Dynamic QR generated via QRServer API using UPI Intent String -->
-                        <img id="upi-qr-img" src="" alt="UPI QR Code" class="w-48 h-48 mx-auto rounded-lg"
-                             onerror="this.src='https://placehold.co/200x200/111827/10b981?text=Scan+UPI+₹99'">
-                        <p class="text-gray-900 font-extrabold text-sm mt-2">Amount: ₹99.00</p>
-                        <p class="text-gray-500 text-[11px]">Merchant: Price Action Academy</p>
+                <!-- STEP 2: BACKEND PAYMENT VERIFICATION & WEBINAR DETAILS MESSAGE SCREEN -->
+                <div id="step-confirmation" class="hidden max-w-xl mx-auto text-center py-4">
+                    <div class="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-3xl mx-auto mb-4 border border-amber-500/40">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Registration Received — Payment Verification In Progress</h3>
+                    
+                    <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-5 my-5 text-left sm:text-center">
+                        <p class="text-emerald-300 font-semibold text-sm sm:text-base leading-relaxed">
+                            Thank you <strong id="conf-name" class="text-white">Trader</strong>! Ek baar aapka <strong class="text-white">₹99 payment backend se verify</strong> hone ke baad, aapko <strong class="text-white">webinar ka timing, Zoom joining link aur sabhi details</strong> aapke registered WhatsApp number (<span id="conf-phone" class="font-mono text-amber-300">—</span>) aur Email par bhej di jayengi.
+                        </p>
                     </div>
 
-                    <!-- Copy UPI ID Box -->
-                    <div class="bg-gray-950 border border-gray-800 rounded-xl p-3.5 mb-5 flex items-center justify-between gap-2">
-                        <div class="text-left">
-                            <p class="text-[11px] text-gray-400">UPI ID (Direct Copy Karein):</p>
-                            <p id="upi-id-text" class="text-sm font-mono font-bold text-emerald-400">yourname@okicici</p>
-                        </div>
-                        <button type="button" onclick="copyUpiId()" class="px-3.5 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer">
-                            <i class="fa-regular fa-copy"></i>
-                            <span id="copy-btn-label">Copy UPI</span>
-                        </button>
-                    </div>
-
-                    <!-- Mobile Deep Link Button -->
-                    <a id="upi-intent-link" href="#" class="sm:hidden w-full mb-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <span>Open UPI App Directly (Pay ₹99)</span>
-                    </a>
-
-                    <!-- UTR Verification Input -->
-                    <div class="text-left bg-gray-950/90 border border-gray-800 rounded-xl p-4 mb-5">
-                        <label class="block text-xs font-semibold text-gray-300 mb-2">Enter 12-Digit UPI Ref / UTR Number *</label>
-                        <input type="text" id="utr-input" maxlength="16" placeholder="e.g., 432819048219"
-                            class="w-full px-4 py-3 bg-gray-900 border border-gray-700 focus:border-emerald-500 rounded-lg text-white font-mono text-sm outline-none">
-                        <p id="utr-error" class="hidden text-red-400 text-xs mt-1.5"></p>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row gap-3">
-                        <button type="button" onclick="backToForm()" class="px-5 py-3.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold text-sm cursor-pointer">
-                            <i class="fa-solid fa-arrow-left mr-1"></i> Back
-                        </button>
-                        <button type="button" id="verify-payment-btn" onclick="confirmBooking()" class="flex-1 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-extrabold text-sm sm:text-base shadow-lg transition cursor-pointer">
-                            Verify Payment & Unlock Access <i class="fa-solid fa-circle-check ml-1"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- STEP 3: INSTANT CONFIRMATION SCREEN -->
-                <div id="step-confirmation" class="hidden max-w-lg mx-auto text-center py-4">
-                    <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-4 border border-emerald-500/40">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Badhai Ho! Aapki Seat Confirm Ho Gayi Hai 🎉</h3>
-                    <p class="text-gray-300 text-sm mt-2">Thank you <strong id="conf-name" class="text-emerald-400">Trader</strong>! Aapki registration details humare system me save ho gayi hain.</p>
-
-                    <div class="bg-gray-950 border border-gray-800 rounded-2xl p-5 my-6 text-left space-y-2.5 text-sm">
+                    <div class="bg-gray-950 border border-gray-800 rounded-2xl p-5 mb-6 text-left space-y-2.5 text-sm">
                         <div class="flex justify-between">
-                            <span class="text-gray-400">Booking ID:</span>
+                            <span class="text-gray-400">Reference ID:</span>
                             <span id="conf-booking-id" class="font-mono font-bold text-amber-400">#SMW-8492</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-400">Session Date & Time:</span>
-                            <span class="font-semibold text-white">Upcoming Sunday, 11:00 AM</span>
+                            <span class="text-gray-400">Payment Status:</span>
+                            <span class="font-semibold text-amber-400">Pending Backend Verification</span>
                         </div>
                         <div class="flex justify-between">
-                            <span class="text-gray-400">Registered WhatsApp:</span>
-                            <span id="conf-phone" class="font-mono text-white">9876543210</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-400">Payment Ref (UTR):</span>
-                            <span id="conf-utr" class="font-mono text-emerald-400">432819048219</span>
+                            <span class="text-gray-400">Amount:</span>
+                            <span class="font-mono text-white">₹99.00 (Cashfree)</span>
                         </div>
                     </div>
 
-                    <p class="text-xs text-gray-400 mb-4">Zoom link aur Free Trading Journal Sheet pane ke liye abhi VIP WhatsApp Group join karein:</p>
-
-                    <a id="whatsapp-group-btn" href="https://wa.me/919999999999?text=Hi%20Mentor!%20Maine%20₹99%20Live%20Stock%20Market%20Masterclass%20ki%20seat%20book%20kar%20li%20hai.%20Please%20mujhe%20VIP%20group%20aur%20bonus%20sheets%20bhej%20dijiye." target="_blank"
-                        class="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-extrabold text-base shadow-lg flex items-center justify-center gap-2 transition">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
-                        <span>Join VIP WhatsApp Group & Claim Bonuses</span>
-                    </a>
+                    <!-- Agar Cashfree tab band ho gaya ho toh dubara kholne ka option -->
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a
+                            href="https://payments.cashfree.com/forms/stock-market-masterclass"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="flex-1 py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-extrabold text-sm sm:text-base shadow-lg flex items-center justify-center gap-2 transition"
+                        >
+                            <span>Complete Payment on Cashfree (₹99)</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <button type="button" onclick="resetToForm()" class="px-5 py-3.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold text-sm cursor-pointer">
+                            Edit Details
+                        </button>
+                    </div>
                 </div>
 
             </div>
@@ -626,11 +579,11 @@
             <!-- FAQ 3 -->
             <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
                 <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base cursor-pointer">
-                    <span>3. Kya session ki recording milegi agar main live miss kar doon?</span>
+                    <span>3. Payment karne ke baad webinar timing aur Zoom link kab milega?</span>
                     <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-200"></i>
                 </button>
                 <div class="faq-content hidden px-5 pb-4 text-gray-400 text-sm leading-relaxed border-t border-gray-800/60 pt-3">
-                    Yeh ek interactive Live Q&A Mentorship session hai isliye hum strongly recommend karte hain ki aap Sunday 11:00 AM par live join karein. Emergency case me registered students ko summary notes aur bonus sheets zaroor milti hain.
+                    Jaise hi aap Cashfree par ₹99 payment complete karte hain, hamari team backend se aapka payment verify karti hai aur turant aapke registered WhatsApp aur Email par webinar ka timing, Zoom joining link aur bonus tools bhej deti hai.
                 </div>
             </div>
 
@@ -694,37 +647,34 @@
     </div>
 
     <!-- =====================================================================
-         JAVASCRIPT: CONFIGURATION, COUNTDOWN, UPI QR, GOOGLE SHEETS SYNC
+         JAVASCRIPT: CONFIGURATION, COUNTDOWN, CASHFREE REDIRECT & SHEET SYNC
          ===================================================================== -->
     <script>
-        /**
-         * =================================================================
-         * EASY CONFIGURATION (YAHAN APNI DETAILS UPDATE KAREIN)
-         * =================================================================
-         */
         const CONFIG = {
-            UPI_ID: "yourname@okicici",              // Apna real UPI ID yahan dalein
-            MERCHANT_NAME: "Price Action Academy",   // Apna brand/naam yahan dalein
-            AMOUNT: "99",                            // Webinar price in INR
-            WHATSAPP_NUMBER: "919999999999",         // Apna WhatsApp number (91 ke saath)
-            GOOGLE_SCRIPT_URL: ""                    // Google Apps Script Web App URL yahan paste karein
+            CASHFREE_PAYMENT_URL: "https://payments.cashfree.com/forms/stock-market-masterclass",
+            AMOUNT: "99",
+            GOOGLE_SCRIPT_URL: "" // Optional: Google Apps Script Web App URL yahan paste kar sakte ho
         };
 
-        // Initialize UPI UI & Upcoming Sunday Date on Load
+        // Initialize Upcoming Sunday Date & Check if user returned after payment
         document.addEventListener("DOMContentLoaded", () => {
-            // Set UPI ID & Dynamic QR Code
-            document.getElementById("upi-id-text").textContent = CONFIG.UPI_ID;
-            const upiUri = `upi://pay?pa=${encodeURIComponent(CONFIG.UPI_ID)}&pn=${encodeURIComponent(CONFIG.MERCHANT_NAME)}&am=${CONFIG.AMOUNT}&cu=INR&tn=${encodeURIComponent("Live Stock Market Webinar")}`;
-            document.getElementById("upi-intent-link").href = upiUri;
-            document.getElementById("upi-qr-img").src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(upiUri)}`;
-
-            // Auto-calculate Upcoming Sunday Date
             const today = new Date();
             const daysUntilSunday = (7 - today.getDay()) % 7 || 7;
             const nextSunday = new Date(today);
             nextSunday.setDate(today.getDate() + daysUntilSunday);
             const options = { day: 'numeric', month: 'short' };
             document.getElementById("webinar-date-display").textContent = `Sun, ${nextSunday.toLocaleDateString('en-IN', options)}`;
+
+            // Agar Cashfree redirect URL me ?payment=success ya ?status=paid aaye toh verification screen dikhao
+            const params = new URLSearchParams(window.location.search);
+            const savedBooking = localStorage.getItem("smw_booking");
+            if ((params.has("payment") || params.has("status") || params.has("order_id")) && savedBooking) {
+                try {
+                    const parsed = JSON.parse(savedBooking);
+                    showVerificationScreen(parsed);
+                    document.getElementById("register-section").scrollIntoView({ behavior: "smooth" });
+                } catch (e) {}
+            }
         });
 
         // 1. Live 15-Minute Evergreen Countdown Timer
@@ -751,15 +701,15 @@
             });
         });
 
-        // 3. Registration Form -> Payment Step Transition
-        let userData = {};
-        document.getElementById("booking-form").addEventListener("submit", (e) => {
+        // 3. Form Submit -> Save Lead, Open Cashfree Link & Show Backend Verification Screen
+        document.getElementById("booking-form").addEventListener("submit", async (e) => {
             e.preventDefault();
             const name = document.getElementById("user-name").value.trim();
             const phone = document.getElementById("user-phone").value.trim();
             const email = document.getElementById("user-email").value.trim();
             const level = document.getElementById("user-level").value;
             const errorBox = document.getElementById("form-error-msg");
+            const btn = document.getElementById("proceed-pay-btn");
 
             if (!/^[6-9]\d{9}$/.test(phone)) {
                 errorBox.textContent = "Kripya sahi 10-digit Indian WhatsApp number dalein.";
@@ -768,60 +718,27 @@
             }
             errorBox.classList.add("hidden");
 
-            userData = { name, phone, email, level };
-            document.getElementById("step-registration").classList.add("hidden");
-            document.getElementById("step-payment").classList.remove("hidden");
-            document.getElementById("register-section").scrollIntoView({ behavior: "smooth" });
-        });
-
-        function backToForm() {
-            document.getElementById("step-payment").classList.add("hidden");
-            document.getElementById("step-registration").classList.remove("hidden");
-        }
-
-        // 4. Copy UPI ID (iFrame-safe execCommand fallback)
-        function copyUpiId() {
-            const tempInput = document.createElement("input");
-            tempInput.value = CONFIG.UPI_ID;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-
-            const label = document.getElementById("copy-btn-label");
-            label.textContent = "Copied!";
-            setTimeout(() => { label.textContent = "Copy UPI"; }, 2000);
-        }
-
-        // 5. Confirm Payment & Save to Google Sheets (via Apps Script)
-        async function confirmBooking() {
-            const utr = document.getElementById("utr-input").value.trim();
-            const utrError = document.getElementById("utr-error");
-            const btn = document.getElementById("verify-payment-btn");
-
-            if (utr.length < 8) {
-                utrError.textContent = "Kripya valid 12-digit UPI Ref / UTR number dalein.";
-                utrError.classList.remove("hidden");
-                return;
-            }
-            utrError.classList.add("hidden");
-
             btn.disabled = true;
-            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Confirming Seat...`;
+            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Redirecting to Cashfree...`;
 
             const bookingId = "SMW-" + Math.floor(1000 + Math.random() * 9000);
             const payload = {
                 bookingId,
                 timestamp: new Date().toLocaleString("en-IN"),
-                ...userData,
-                utr,
-                amount: CONFIG.AMOUNT
+                name,
+                phone,
+                email,
+                level,
+                amount: CONFIG.AMOUNT,
+                status: "Redirected to Cashfree"
             };
 
-            // Send data to Google Apps Script if URL is configured
+            localStorage.setItem("smw_booking", JSON.stringify(payload));
+
+            // Optional Google Sheet sync
             if (CONFIG.GOOGLE_SCRIPT_URL) {
                 try {
-                    await fetch(CONFIG.GOOGLE_SCRIPT_URL, {
+                    fetch(CONFIG.GOOGLE_SCRIPT_URL, {
                         method: "POST",
                         mode: "no-cors",
                         headers: { "Content-Type": "application/json" },
@@ -832,20 +749,36 @@
                 }
             }
 
-            // Update Confirmation Screen
-            document.getElementById("conf-name").textContent = userData.name;
-            document.getElementById("conf-booking-id").textContent = "#" + bookingId;
-            document.getElementById("conf-phone").textContent = userData.phone;
-            document.getElementById("conf-utr").textContent = utr;
+            // Show Backend Verification Screen on Website
+            showVerificationScreen(payload);
 
-            const waMsg = `Hi Mentor! Maine ₹99 Live Stock Market Masterclass book kar li hai.%0A*Booking ID:* ${bookingId}%0A*Name:* ${userData.name}%0A*UTR:* ${utr}%0APlease mujhe VIP WhatsApp group aur Bonus Sheets bhej dijiye.`;
-            document.getElementById("whatsapp-group-btn").href = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${waMsg}`;
+            // Open Cashfree Payment Link Directly
+            const newTab = window.open(CONFIG.CASHFREE_PAYMENT_URL, "_blank", "noopener,noreferrer");
+            if (!newTab) {
+                // Fallback agar mobile browser popup block kare toh same tab me redirect kare
+                window.location.href = CONFIG.CASHFREE_PAYMENT_URL;
+            }
+        });
 
-            document.getElementById("step-payment").classList.add("hidden");
+        function showVerificationScreen(data) {
+            document.getElementById("conf-name").textContent = data.name || "Trader";
+            document.getElementById("conf-phone").textContent = data.phone || "—";
+            document.getElementById("conf-booking-id").textContent = "#" + (data.bookingId || "SMW-99");
+
+            document.getElementById("step-registration").classList.add("hidden");
             document.getElementById("step-confirmation").classList.remove("hidden");
         }
 
-        // 6. Policy Modal Logic
+        function resetToForm() {
+            const btn = document.getElementById("proceed-pay-btn");
+            btn.disabled = false;
+            btn.innerHTML = `<span>Pay ₹99 &amp; Confirm Seat</span><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>`;
+
+            document.getElementById("step-confirmation").classList.add("hidden");
+            document.getElementById("step-registration").classList.remove("hidden");
+        }
+
+        // 4. Policy Modal Logic
         function openPolicyModal(type) {
             const modal = document.getElementById("policy-modal");
             const title = document.getElementById("policy-title");
