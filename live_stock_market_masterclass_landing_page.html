@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stock Market & Price Action Masterclass | ₹99 Seat Booking</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Noto Sans Devanagari -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans Devanagari', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0e17',
+                            card: '#111827',
+                            border: '#1f2937',
+                            emerald: '#10b981',
+                            emeraldDark: '#059669',
+                            amber: '#f59e0b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0e17;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .glow-emerald {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25);
+        }
+        .glow-amber {
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.2);
+        }
+        .hero-grid {
+            background-image: radial-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0e17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+    </style>
+</head>
+<body class="antialiased pb-24 md:pb-0">
+
+    <!-- =====================================================================
+         1. TOP URGENCY ANNOUNCEMENT BAR WITH LIVE TIMER
+         ===================================================================== -->
+    <div class="bg-gradient-to-r from-red-950 via-gray-900 to-red-950 border-b border-red-500/30 py-2.5 px-4 sticky top-0 z-40 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-white">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+                </span>
+                <span>LIVE SUNDAY MASTERCLASS — Limited Seats | 100% Practical Price Action</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-bold">
+                <span class="text-gray-300">Offer Ends In:</span>
+                <div class="flex items-center gap-1 font-mono text-amber-400 bg-black/60 px-2.5 py-1 rounded border border-amber-500/30">
+                    <span id="top-mins">14</span>m : <span id="top-secs">59</span>s
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         2. HERO SECTION
+         ===================================================================== -->
+    <section class="relative hero-grid pt-10 pb-16 md:pt-16 md:pb-24 px-4 border-b border-gray-800/80">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[320px] md:w-[600px] h-[250px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+            
+            <!-- Left Column: Copy & Primary CTA -->
+            <div class="lg:col-span-7 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-semibold mb-5">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Beginners & Working Professionals Ke Liye Live Training</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight mb-5">
+                    Stock Market Me <span class="text-red-400 line-through decoration-red-500/80">Tukke Marna</span> Band Karein — Seekhein Pure <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Price Action & Risk Management</span>
+                </h1>
+
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-7 max-w-2xl mx-auto lg:mx-0">
+                    2-Hour Live Interactive Webinar + <strong class="text-white">Personal Q&A Mentorship Session</strong>. Bina kisi fake tip ya indicator ke, charts ko padhna aur apne capital ko protect karna seekhein.
+                </p>
+
+                <!-- Webinar Meta Pills -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8 max-w-xl mx-auto lg:mx-0">
+                    <div class="bg-gray-900/90 border border-gray-800 rounded-xl p-3 flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center shrink-0">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-[11px] text-gray-400 uppercase">Date & Day</p>
+                            <p id="webinar-date-display" class="text-xs sm:text-sm font-bold text-white">This Sunday</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900/90 border border-gray-800 rounded-xl p-3 flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center shrink-0">
+                            <i class="fa-regular fa-clock"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-[11px] text-gray-400 uppercase">Timing</p>
+                            <p class="text-xs sm:text-sm font-bold text-white">11:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1 bg-gray-900/90 border border-gray-800 rounded-xl p-3 flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-language"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-[11px] text-gray-400 uppercase">Language</p>
+                            <p class="text-xs sm:text-sm font-bold text-white">Simple Hindi + Eng</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main CTA Button -->
+                <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                    <a href="#register-section" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-gray-950 font-extrabold text-base sm:text-lg shadow-lg glow-emerald transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                        <span>Abhi Apni Seat Book Karein — ₹99</span>
+                        <span class="text-xs bg-gray-950/20 px-2 py-0.5 rounded line-through font-semibold">₹999</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="mt-5 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs text-gray-400">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> Instant WhatsApp & Email Access</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> Zero Prior Experience Needed</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> Live Doubt Clearing</span>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Masterclass Card -->
+            <div class="lg:col-span-5">
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 sm:p-7 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-amber-500 text-gray-950 text-[11px] font-extrabold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
+                        Live Zoom Session
+                    </div>
+
+                    <!-- Simulated Clean Candlestick SVG Preview -->
+                    <div class="bg-gray-950 border border-gray-800/90 rounded-xl p-4 mb-6">
+                        <div class="flex items-center justify-between text-xs text-gray-400 mb-3">
+                            <span class="font-semibold text-gray-200 flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Pure Price Action Chart Setup
+                            </span>
+                            <span class="text-emerald-400 font-mono">1:3 Risk-Reward</span>
+                        </div>
+                        <svg viewBox="0 0 320 120" class="w-full h-28 overflow-visible">
+                            <!-- Grid lines -->
+                            <line x1="0" y1="25" x2="320" y2="25" stroke="#1f2937" stroke-dasharray="3 3" />
+                            <line x1="0" y1="60" x2="320" y2="60" stroke="#1f2937" stroke-dasharray="3 3" />
+                            <line x1="0" y1="95" x2="320" y2="95" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5" />
+                            <text x="5" y="90" fill="#10b981" font-size="8" font-family="monospace">STRONG SUPPORT ZONE</text>
+                            
+                            <!-- Candlesticks -->
+                            <!-- Red candles -->
+                            <line x1="30" y1="20" x2="30" y2="55" stroke="#ef4444" stroke-width="1.5"/><rect x="26" y="26" width="8" height="22" fill="#ef4444" rx="1"/>
+                            <line x1="55" y1="35" x2="55" y2="75" stroke="#ef4444" stroke-width="1.5"/><rect x="51" y="42" width="8" height="26" fill="#ef4444" rx="1"/>
+                            <line x1="80" y1="55" x2="80" y2="92" stroke="#ef4444" stroke-width="1.5"/><rect x="76" y="62" width="8" height="24" fill="#ef4444" rx="1"/>
+                            <!-- Rejection Hammer -->
+                            <line x1="110" y1="68" x2="110" y2="98" stroke="#10b981" stroke-width="1.5"/><rect x="106" y="70" width="8" height="10" fill="#10b981" rx="1"/>
+                            <!-- Green Breakout Candles -->
+                            <line x1="140" y1="52" x2="140" y2="80" stroke="#10b981" stroke-width="1.5"/><rect x="136" y="56" width="8" height="18" fill="#10b981" rx="1"/>
+                            <line x1="170" y1="38" x2="170" y2="65" stroke="#10b981" stroke-width="1.5"/><rect x="166" y="42" width="8" height="18" fill="#10b981" rx="1"/>
+                            <line x1="200" y1="45" x2="200" y2="62" stroke="#ef4444" stroke-width="1.5"/><rect x="196" y="47" width="8" height="10" fill="#ef4444" rx="1"/>
+                            <line x1="230" y1="25" x2="230" y2="55" stroke="#10b981" stroke-width="1.5"/><rect x="226" y="29" width="8" height="20" fill="#10b981" rx="1"/>
+                            <line x1="260" y1="12" x2="260" y2="38" stroke="#10b981" stroke-width="1.5"/><rect x="256" y="16" width="8" height="18" fill="#10b981" rx="1"/>
+                            <line x1="290" y1="5" x2="290" y2="26" stroke="#10b981" stroke-width="1.5"/><rect x="286" y="8" width="8" height="14" fill="#10b981" rx="1"/>
+                        </svg>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-bolt text-amber-400"></i>
+                        <span>Is 2-Hour Masterclass Me Aap Kya Seekhenge:</span>
+                    </h3>
+
+                    <ul class="space-y-3 text-sm text-gray-300 mb-6">
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs"><i class="fa-solid fa-check"></i></span>
+                            <span><strong>Clean Chart Reading:</strong> 10 indicators hatakar sirf price aur volume se market direction samajhna.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs"><i class="fa-solid fa-check"></i></span>
+                            <span><strong>Institutional Levels:</strong> High-probability Support & Resistance zones draw karne ka exact formula.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs"><i class="fa-solid fa-check"></i></span>
+                            <span><strong>Capital Protection Rule:</strong> Chhote capital par bhi big loss se bachne ka 2% Risk Management rule.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 text-xs"><i class="fa-solid fa-check"></i></span>
+                            <span><strong>Personal Mentorship Roadmap:</strong> Aage step-by-step live practice aur personal guidance kaise milegi.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Seat Progress Bar -->
+                    <div class="bg-gray-950/90 border border-gray-800 rounded-xl p-3.5">
+                        <div class="flex justify-between text-xs font-semibold mb-1.5">
+                            <span class="text-amber-400"><i class="fa-solid fa-fire mr-1"></i> 84% Seats Booked</span>
+                            <span class="text-gray-400">Sirf 16 Seats Bachi Hain</span>
+                        </div>
+                        <div class="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-amber-500 to-emerald-500 w-[84%] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         3. TARGET AUDIENCE / PAIN POINTS ("YEH LIVE TRAINING KISKE LIYE HAI?")
+         ===================================================================== -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-emerald-400 font-bold text-xs uppercase tracking-widest">Who Should Attend</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2">Yeh Live Training Kiske Liye Hai?</h2>
+            <p class="text-gray-400 text-sm sm:text-base mt-2">Agar aap in 4 me se kisi ek bhi situation me hain, toh yeh 2-hour session aapke trading mindset ko badal sakta hai.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <!-- Card 1 -->
+            <div class="bg-gray-900 border border-gray-800 hover:border-emerald-500/40 transition-all rounded-2xl p-6 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 flex items-center justify-center shrink-0 text-xl">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-1.5">Telegram Tips & News Par Loss Karne Wale</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Jo doosron ki calls ya random videos dekh kar trade lete hain aur har baar entry lete hi market opposite chala jata hai.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gray-900 border border-gray-800 hover:border-emerald-500/40 transition-all rounded-2xl p-6 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 text-xl">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-1.5">Small Capital Se Disciplined Shuruat</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Jo ₹10,000–₹25,000 jaise chhote capital se proper Stop-Loss aur Position Sizing ke saath safe trading seekhna chahte hain.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gray-900 border border-gray-800 hover:border-emerald-500/40 transition-all rounded-2xl p-6 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-xl">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-1.5">Complete Beginners & Job Professionals</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Jinko candlesticks, trendlines aur chart reading bilkul zero se aasan Hinglish bhasha me samajhni hai.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-gray-900 border border-gray-800 hover:border-emerald-500/40 transition-all rounded-2xl p-6 flex items-start gap-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 text-xl">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white mb-1.5">Personal Mentor Guidance Chahne Wale</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Jo recorded videos dekh kar bore ho chuke hain aur ek live mentor ke saath apne real doubts clear karna chahte hain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         4. 2-HOUR LIVE MASTERCLASS CURRICULUM
+         ===================================================================== -->
+    <section class="py-16 px-4 bg-gray-900/50 border-y border-gray-800/80">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Step-by-Step Breakdown</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-2">2-Hour Live Masterclass Curriculum</h2>
+                <p class="text-gray-400 text-sm sm:text-base mt-2">Har minute pure practical learning — zero timepass, zero theory overload.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Module 1 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-mono font-bold text-xs shrink-0 mt-0.5">
+                            MODULE 01
+                        </div>
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-white">Market Structure & Candlestick Psychology</h3>
+                            <p class="text-gray-400 text-sm mt-1">Candles ke peeche buyers aur sellers ki psychology kya hoti hai? Chart dekh kar trend (Uptrend, Downtrend, Sideways) pehchanna.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono text-gray-400 bg-gray-950 px-3 py-1 rounded-full border border-gray-800 shrink-0 self-start sm:self-center">00 - 30 Mins</span>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-mono font-bold text-xs shrink-0 mt-0.5">
+                            MODULE 02
+                        </div>
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-white">High-Probability Support, Resistance & Breakout Traps</h3>
+                            <p class="text-gray-400 text-sm mt-1">Fake breakouts se kaise bachein aur asli institutional demand/supply zones par high-probability setup kaise spot karein.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono text-gray-400 bg-gray-950 px-3 py-1 rounded-full border border-gray-800 shrink-0 self-start sm:self-center">30 - 65 Mins</span>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 font-mono font-bold text-xs shrink-0 mt-0.5">
+                            MODULE 03
+                        </div>
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-white">The 2% Risk Management & Position Sizing Formula</h3>
+                            <p class="text-gray-400 text-sm mt-1">Professional traders apna capital kaise bachate hain? Har trade se pehle exact quantity aur Stop-Loss calculate karne ka rule.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono text-gray-400 bg-gray-950 px-3 py-1 rounded-full border border-gray-800 shrink-0 self-start sm:self-center">65 - 95 Mins</span>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="bg-gray-900 border border-amber-500/30 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-400 font-mono font-bold text-xs shrink-0 mt-0.5">
+                            MODULE 04
+                        </div>
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-white">Live Chart Walkthrough + Open Q&A Mentorship</h3>
+                            <p class="text-gray-400 text-sm mt-1">Real charts par live examples aur aapke sabhi sawalon ke seedhe jawab + Personal Mentorship batch ki details.</p>
+                        </div>
+                    </div>
+                    <span class="text-xs font-mono text-amber-400 bg-gray-950 px-3 py-1 rounded-full border border-amber-500/30 shrink-0 self-start sm:self-center">95 - 120 Mins</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         5. EXCLUSIVE FREE BONUSES (WORTH ₹2,499)
+         ===================================================================== -->
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="inline-block px-3 py-1 rounded-full bg-amber-500/15 text-amber-400 font-bold text-xs uppercase tracking-wider mb-2">
+                Free Action-Taker Bonuses
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Aaj Register Karne Par ₹2,499 Ke Tools Bilkul FREE!</h2>
+            <p class="text-gray-400 text-sm sm:text-base mt-2">Jaise hi aap apni ₹99 seat book karenge, yeh 3 practical tools aapko turant mil jayenge.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Bonus 1 -->
+            <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 rounded-2xl p-6 relative overflow-hidden">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded">Bonus #1</span>
+                    <span class="text-xs text-gray-400 line-through">Value: ₹999</span>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-table-columns"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Automated Trading Journal (Google Sheet)</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Apne har trade ko track karein—win rate, average profit/loss aur trading mistakes automatically calculate hongi.</p>
+            </div>
+
+            <!-- Bonus 2 -->
+            <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 rounded-2xl p-6 relative overflow-hidden">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded">Bonus #2</span>
+                    <span class="text-xs text-gray-400 line-through">Value: ₹799</span>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Position Size & Risk Calculator</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Capital aur Stop-Loss dalte hi yeh calculator batayega ki aapko kitni quantity leni chahiye taaki loss hamesha control me rahe.</p>
+            </div>
+
+            <!-- Bonus 3 -->
+            <div class="bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 rounded-2xl p-6 relative overflow-hidden">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded">Bonus #3</span>
+                    <span class="text-xs text-gray-400 line-through">Value: ₹701</span>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center text-2xl mb-4">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">VIP Webinar WhatsApp Community</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">Live Zoom link, pre-session chart PDFs aur direct mentor reminders ke liye exclusive WhatsApp group access.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         6. INTERACTIVE REGISTRATION & UPI PAYMENT SECTION
+         ===================================================================== -->
+    <section id="register-section" class="py-16 px-4 bg-gradient-to-b from-gray-900/60 to-[#0a0e17] border-t border-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gray-900 border border-emerald-500/30 rounded-3xl p-6 sm:p-10 shadow-2xl glow-emerald">
+                
+                <!-- STEP 1: REGISTRATION FORM -->
+                <div id="step-registration">
+                    <div class="text-center mb-8">
+                        <span class="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+                            Step 1 of 2 — Seat Reservation
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-3">Apni Live Masterclass Seat Reserve Karein</h2>
+                        <p class="text-gray-400 text-sm mt-1">Neeche apni details bharein — Zoom link aur Free Bonuses isi WhatsApp & Email par bheje jayenge.</p>
+                    </div>
+
+                    <form id="booking-form" class="space-y-5 max-w-xl mx-auto">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Full Name *</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-500"><i class="fa-regular fa-user"></i></span>
+                                <input type="text" id="user-name" required placeholder="Apna poora naam likhein (e.g., Rahul Sharma)"
+                                    class="w-full pl-10 pr-4 py-3.5 bg-gray-950 border border-gray-700 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl text-white text-sm outline-none transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">WhatsApp Number *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-emerald-500"><i class="fa-brands fa-whatsapp"></i></span>
+                                    <input type="tel" id="user-phone" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit WhatsApp No."
+                                        class="w-full pl-10 pr-4 py-3.5 bg-gray-950 border border-gray-700 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl text-white text-sm outline-none transition">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Email Address *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-500"><i class="fa-regular fa-envelope"></i></span>
+                                    <input type="email" id="user-email" required placeholder="you@example.com"
+                                        class="w-full pl-10 pr-4 py-3.5 bg-gray-950 border border-gray-700 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl text-white text-sm outline-none transition">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-gray-300 mb-2">Aapka Current Trading Level *</label>
+                            <select id="user-level" required
+                                class="w-full px-4 py-3.5 bg-gray-950 border border-gray-700 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl text-white text-sm outline-none transition">
+                                <option value="Complete Beginner">Complete Beginner (Abhi seekhna shuru karna hai)</option>
+                                <option value="Basic Knowledge">Basic Knowledge (Kabhi-kabhi trade karta hoon)</option>
+                                <option value="Struggling Trader">Struggling Trader (Loss recover aur discipline seekhna hai)</option>
+                            </select>
+                        </div>
+
+                        <!-- Order Summary Box -->
+                        <div class="bg-gray-950 border border-gray-800 rounded-xl p-4 flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-bold text-white">2-Hour Live Masterclass + 3 Bonuses</p>
+                                <p class="text-xs text-emerald-400">Includes Personal Q&A Session</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs text-gray-500 line-through block">₹999</span>
+                                <span class="text-2xl font-black text-white">₹99</span>
+                            </div>
+                        </div>
+
+                        <div id="form-error-msg" class="hidden text-red-400 text-xs bg-red-950/50 border border-red-500/30 p-3 rounded-lg"></div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-gray-950 font-extrabold text-base sm:text-lg shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+                            <span>Proceed to Pay ₹99 & Confirm Seat</span>
+                            <i class="fa-solid fa-lock text-sm"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- STEP 2: UPI PAYMENT SCREEN -->
+                <div id="step-payment" class="hidden max-w-lg mx-auto text-center">
+                    <span class="px-3 py-1 rounded-full bg-amber-500/15 text-amber-400 text-xs font-bold uppercase tracking-wider">
+                        Step 2 of 2 — Instant UPI Payment
+                    </span>
+                    <h3 class="text-2xl font-extrabold text-white mt-3">Scan & Pay ₹99 via Any UPI App</h3>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-1">GPay, PhonePe, Paytm ya BHIM UPI se ₹99 pay karke neeche 12-digit UTR / Ref ID dalein.</p>
+
+                    <!-- Dynamic QR Code Card -->
+                    <div class="bg-white rounded-2xl p-5 my-6 inline-block shadow-xl">
+                        <!-- Dynamic QR generated via QRServer API using UPI Intent String -->
+                        <img id="upi-qr-img" src="" alt="UPI QR Code" class="w-48 h-48 mx-auto rounded-lg"
+                             onerror="this.src='https://placehold.co/200x200/111827/10b981?text=Scan+UPI+₹99'">
+                        <p class="text-gray-900 font-extrabold text-sm mt-2">Amount: ₹99.00</p>
+                        <p class="text-gray-500 text-[11px]">Merchant: Price Action Academy</p>
+                    </div>
+
+                    <!-- Copy UPI ID Box -->
+                    <div class="bg-gray-950 border border-gray-800 rounded-xl p-3.5 mb-5 flex items-center justify-between gap-2">
+                        <div class="text-left">
+                            <p class="text-[11px] text-gray-400">UPI ID (Direct Copy Karein):</p>
+                            <p id="upi-id-text" class="text-sm font-mono font-bold text-emerald-400">yourname@okicici</p>
+                        </div>
+                        <button type="button" onclick="copyUpiId()" class="px-3.5 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer">
+                            <i class="fa-regular fa-copy"></i>
+                            <span id="copy-btn-label">Copy UPI</span>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Deep Link Button -->
+                    <a id="upi-intent-link" href="#" class="sm:hidden w-full mb-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <span>Open UPI App Directly (Pay ₹99)</span>
+                    </a>
+
+                    <!-- UTR Verification Input -->
+                    <div class="text-left bg-gray-950/90 border border-gray-800 rounded-xl p-4 mb-5">
+                        <label class="block text-xs font-semibold text-gray-300 mb-2">Enter 12-Digit UPI Ref / UTR Number *</label>
+                        <input type="text" id="utr-input" maxlength="16" placeholder="e.g., 432819048219"
+                            class="w-full px-4 py-3 bg-gray-900 border border-gray-700 focus:border-emerald-500 rounded-lg text-white font-mono text-sm outline-none">
+                        <p id="utr-error" class="hidden text-red-400 text-xs mt-1.5"></p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="button" onclick="backToForm()" class="px-5 py-3.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold text-sm cursor-pointer">
+                            <i class="fa-solid fa-arrow-left mr-1"></i> Back
+                        </button>
+                        <button type="button" id="verify-payment-btn" onclick="confirmBooking()" class="flex-1 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-extrabold text-sm sm:text-base shadow-lg transition cursor-pointer">
+                            Verify Payment & Unlock Access <i class="fa-solid fa-circle-check ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: INSTANT CONFIRMATION SCREEN -->
+                <div id="step-confirmation" class="hidden max-w-lg mx-auto text-center py-4">
+                    <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto mb-4 border border-emerald-500/40">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Badhai Ho! Aapki Seat Confirm Ho Gayi Hai 🎉</h3>
+                    <p class="text-gray-300 text-sm mt-2">Thank you <strong id="conf-name" class="text-emerald-400">Trader</strong>! Aapki registration details humare system me save ho gayi hain.</p>
+
+                    <div class="bg-gray-950 border border-gray-800 rounded-2xl p-5 my-6 text-left space-y-2.5 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Booking ID:</span>
+                            <span id="conf-booking-id" class="font-mono font-bold text-amber-400">#SMW-8492</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Session Date & Time:</span>
+                            <span class="font-semibold text-white">Upcoming Sunday, 11:00 AM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Registered WhatsApp:</span>
+                            <span id="conf-phone" class="font-mono text-white">9876543210</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Payment Ref (UTR):</span>
+                            <span id="conf-utr" class="font-mono text-emerald-400">432819048219</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-400 mb-4">Zoom link aur Free Trading Journal Sheet pane ke liye abhi VIP WhatsApp Group join karein:</p>
+
+                    <a id="whatsapp-group-btn" href="https://wa.me/919999999999?text=Hi%20Mentor!%20Maine%20₹99%20Live%20Stock%20Market%20Masterclass%20ki%20seat%20book%20kar%20li%20hai.%20Please%20mujhe%20VIP%20group%20aur%20bonus%20sheets%20bhej%20dijiye." target="_blank"
+                        class="w-full py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-extrabold text-base shadow-lg flex items-center justify-center gap-2 transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Join VIP WhatsApp Group & Claim Bonuses</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         7. FAQ ACCORDION SECTION
+         ===================================================================== -->
+    <section class="py-16 px-4 max-w-3xl mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Aksar Puche Jane Wale Sawal (FAQ)</h2>
+        </div>
+
+        <div class="space-y-3" id="faq-container">
+            <!-- FAQ 1 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+                <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base cursor-pointer">
+                    <span>1. Main bilkul beginner hoon, kya mujhe yeh class samajh aayegi?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-200"></i>
+                </button>
+                <div class="faq-content hidden px-5 pb-4 text-gray-400 text-sm leading-relaxed border-t border-gray-800/60 pt-3">
+                    Bilkul! Is masterclass ko design hi is tarah kiya gaya hai ki agar aapne aaj tak ek bhi chart nahi dekha hai, tab bhi aapko candlesticks, support-resistance aur risk management bilkul zero se aasan Hindi/Hinglish me samajh aa jayega.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+                <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base cursor-pointer">
+                    <span>2. Kya is webinar me stock tips ya buy/sell calls di jayengi?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-200"></i>
+                </button>
+                <div class="faq-content hidden px-5 pb-4 text-gray-400 text-sm leading-relaxed border-t border-gray-800/60 pt-3">
+                    Nahi. Hum koi tips ya calls provider nahi hain. Hamara maksad aapko khud se chart padhna aur independent decision lena sikhana hai taaki aap kisi par dependent na rahein.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+                <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base cursor-pointer">
+                    <span>3. Kya session ki recording milegi agar main live miss kar doon?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-200"></i>
+                </button>
+                <div class="faq-content hidden px-5 pb-4 text-gray-400 text-sm leading-relaxed border-t border-gray-800/60 pt-3">
+                    Yeh ek interactive Live Q&A Mentorship session hai isliye hum strongly recommend karte hain ki aap Sunday 11:00 AM par live join karein. Emergency case me registered students ko summary notes aur bonus sheets zaroor milti hain.
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
+                <button type="button" class="faq-btn w-full px-5 py-4 text-left flex items-center justify-between gap-4 font-bold text-white text-sm sm:text-base cursor-pointer">
+                    <span>4. Personal Mentorship Course ke baare me kaise pata chalega?</span>
+                    <i class="fa-solid fa-chevron-down text-emerald-400 transition-transform duration-200"></i>
+                </button>
+                <div class="faq-content hidden px-5 pb-4 text-gray-400 text-sm leading-relaxed border-t border-gray-800/60 pt-3">
+                    2-Hour Live Masterclass ke end me hum apne Personal Mentorship & Live Practice Program ka complete structure share karenge. Agar aapko hamari teaching style pasand aaye, tabhi aap aage join kar sakte hain—koi zabardasti nahi hai.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================================
+         8. META POLICY-SAFE COMPLIANCE FOOTER
+         ===================================================================== -->
+    <footer class="bg-gray-950 border-t border-gray-900 py-10 px-4 text-center text-gray-500 text-xs">
+        <div class="max-w-4xl mx-auto space-y-4">
+            <div class="bg-gray-900/70 border border-gray-800 rounded-xl p-4 text-left sm:text-center leading-relaxed text-gray-400">
+                <strong class="text-gray-200">SEBI & Educational Disclaimer:</strong> This webinar, training program, and all bonus materials are strictly for <strong>educational and informational purposes only</strong>. We are <strong>NOT SEBI-registered</strong> investment advisors, portfolio managers, or research analysts. We do not provide any stock tips, buy/sell recommendations, or guaranteed profit claims. Trading and investing in financial markets carry inherent risk; please consult a certified financial advisor before making any investment decisions.
+            </div>
+            <div class="flex items-center justify-center gap-6 text-gray-400">
+                <button type="button" onclick="openPolicyModal('privacy')" class="hover:text-white underline cursor-pointer">Privacy Policy</button>
+                <button type="button" onclick="openPolicyModal('terms')" class="hover:text-white underline cursor-pointer">Terms & Conditions</button>
+                <button type="button" onclick="openPolicyModal('refund')" class="hover:text-white underline cursor-pointer">Refund Policy</button>
+            </div>
+            <p>&copy; 2026 Price Action Mentorship Academy. All Rights Reserved. This site is not a part of the Meta/Facebook website or Meta Platforms, Inc.</p>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         STICKY MOBILE BOTTOM CTA BAR
+         ===================================================================== -->
+    <div class="md:hidden fixed bottom-0 inset-x-0 bg-gray-950/95 backdrop-blur-md border-t border-gray-800 p-3 z-50 flex items-center justify-between gap-3">
+        <div>
+            <div class="flex items-center gap-1.5">
+                <span class="text-lg font-black text-white">₹99</span>
+                <span class="text-xs text-gray-500 line-through">₹999</span>
+            </div>
+            <p class="text-[11px] text-amber-400 font-semibold">Ends in <span id="mob-mins">14</span>:<span id="mob-secs">59</span></p>
+        </div>
+        <a href="#register-section" class="flex-1 py-3 px-4 rounded-xl bg-emerald-500 text-gray-950 font-extrabold text-sm text-center shadow-lg">
+            Seat Book Karein — ₹99 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </a>
+    </div>
+
+    <!-- =====================================================================
+         CUSTOM POLICY MODAL (NO ALERT() USED)
+         ===================================================================== -->
+    <div id="policy-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 rounded-2xl max-w-lg w-full p-6 relative">
+            <button type="button" onclick="closePolicyModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-lg cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="policy-title" class="text-lg font-bold text-white mb-3">Policy</h3>
+            <p id="policy-body" class="text-gray-400 text-sm leading-relaxed"></p>
+        </div>
+    </div>
+
+    <!-- =====================================================================
+         JAVASCRIPT: CONFIGURATION, COUNTDOWN, UPI QR, GOOGLE SHEETS SYNC
+         ===================================================================== -->
+    <script>
+        /**
+         * =================================================================
+         * EASY CONFIGURATION (YAHAN APNI DETAILS UPDATE KAREIN)
+         * =================================================================
+         */
+        const CONFIG = {
+            UPI_ID: "yourname@okicici",              // Apna real UPI ID yahan dalein
+            MERCHANT_NAME: "Price Action Academy",   // Apna brand/naam yahan dalein
+            AMOUNT: "99",                            // Webinar price in INR
+            WHATSAPP_NUMBER: "919999999999",         // Apna WhatsApp number (91 ke saath)
+            GOOGLE_SCRIPT_URL: ""                    // Google Apps Script Web App URL yahan paste karein
+        };
+
+        // Initialize UPI UI & Upcoming Sunday Date on Load
+        document.addEventListener("DOMContentLoaded", () => {
+            // Set UPI ID & Dynamic QR Code
+            document.getElementById("upi-id-text").textContent = CONFIG.UPI_ID;
+            const upiUri = `upi://pay?pa=${encodeURIComponent(CONFIG.UPI_ID)}&pn=${encodeURIComponent(CONFIG.MERCHANT_NAME)}&am=${CONFIG.AMOUNT}&cu=INR&tn=${encodeURIComponent("Live Stock Market Webinar")}`;
+            document.getElementById("upi-intent-link").href = upiUri;
+            document.getElementById("upi-qr-img").src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(upiUri)}`;
+
+            // Auto-calculate Upcoming Sunday Date
+            const today = new Date();
+            const daysUntilSunday = (7 - today.getDay()) % 7 || 7;
+            const nextSunday = new Date(today);
+            nextSunday.setDate(today.getDate() + daysUntilSunday);
+            const options = { day: 'numeric', month: 'short' };
+            document.getElementById("webinar-date-display").textContent = `Sun, ${nextSunday.toLocaleDateString('en-IN', options)}`;
+        });
+
+        // 1. Live 15-Minute Evergreen Countdown Timer
+        let totalSeconds = 14 * 60 + 59;
+        setInterval(() => {
+            if (totalSeconds <= 0) totalSeconds = 14 * 60 + 59;
+            totalSeconds--;
+            const mins = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+            const secs = String(totalSeconds % 60).padStart(2, '0');
+            
+            document.getElementById("top-mins").textContent = mins;
+            document.getElementById("top-secs").textContent = secs;
+            document.getElementById("mob-mins").textContent = mins;
+            document.getElementById("mob-secs").textContent = secs;
+        }, 1000);
+
+        // 2. FAQ Accordion Logic
+        document.querySelectorAll(".faq-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector("i");
+                content.classList.toggle("hidden");
+                icon.classList.toggle("rotate-180");
+            });
+        });
+
+        // 3. Registration Form -> Payment Step Transition
+        let userData = {};
+        document.getElementById("booking-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("user-name").value.trim();
+            const phone = document.getElementById("user-phone").value.trim();
+            const email = document.getElementById("user-email").value.trim();
+            const level = document.getElementById("user-level").value;
+            const errorBox = document.getElementById("form-error-msg");
+
+            if (!/^[6-9]\d{9}$/.test(phone)) {
+                errorBox.textContent = "Kripya sahi 10-digit Indian WhatsApp number dalein.";
+                errorBox.classList.remove("hidden");
+                return;
+            }
+            errorBox.classList.add("hidden");
+
+            userData = { name, phone, email, level };
+            document.getElementById("step-registration").classList.add("hidden");
+            document.getElementById("step-payment").classList.remove("hidden");
+            document.getElementById("register-section").scrollIntoView({ behavior: "smooth" });
+        });
+
+        function backToForm() {
+            document.getElementById("step-payment").classList.add("hidden");
+            document.getElementById("step-registration").classList.remove("hidden");
+        }
+
+        // 4. Copy UPI ID (iFrame-safe execCommand fallback)
+        function copyUpiId() {
+            const tempInput = document.createElement("input");
+            tempInput.value = CONFIG.UPI_ID;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const label = document.getElementById("copy-btn-label");
+            label.textContent = "Copied!";
+            setTimeout(() => { label.textContent = "Copy UPI"; }, 2000);
+        }
+
+        // 5. Confirm Payment & Save to Google Sheets (via Apps Script)
+        async function confirmBooking() {
+            const utr = document.getElementById("utr-input").value.trim();
+            const utrError = document.getElementById("utr-error");
+            const btn = document.getElementById("verify-payment-btn");
+
+            if (utr.length < 8) {
+                utrError.textContent = "Kripya valid 12-digit UPI Ref / UTR number dalein.";
+                utrError.classList.remove("hidden");
+                return;
+            }
+            utrError.classList.add("hidden");
+
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Confirming Seat...`;
+
+            const bookingId = "SMW-" + Math.floor(1000 + Math.random() * 9000);
+            const payload = {
+                bookingId,
+                timestamp: new Date().toLocaleString("en-IN"),
+                ...userData,
+                utr,
+                amount: CONFIG.AMOUNT
+            };
+
+            // Send data to Google Apps Script if URL is configured
+            if (CONFIG.GOOGLE_SCRIPT_URL) {
+                try {
+                    await fetch(CONFIG.GOOGLE_SCRIPT_URL, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(payload)
+                    });
+                } catch (err) {
+                    console.error("Sheet sync error:", err);
+                }
+            }
+
+            // Update Confirmation Screen
+            document.getElementById("conf-name").textContent = userData.name;
+            document.getElementById("conf-booking-id").textContent = "#" + bookingId;
+            document.getElementById("conf-phone").textContent = userData.phone;
+            document.getElementById("conf-utr").textContent = utr;
+
+            const waMsg = `Hi Mentor! Maine ₹99 Live Stock Market Masterclass book kar li hai.%0A*Booking ID:* ${bookingId}%0A*Name:* ${userData.name}%0A*UTR:* ${utr}%0APlease mujhe VIP WhatsApp group aur Bonus Sheets bhej dijiye.`;
+            document.getElementById("whatsapp-group-btn").href = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${waMsg}`;
+
+            document.getElementById("step-payment").classList.add("hidden");
+            document.getElementById("step-confirmation").classList.remove("hidden");
+        }
+
+        // 6. Policy Modal Logic
+        function openPolicyModal(type) {
+            const modal = document.getElementById("policy-modal");
+            const title = document.getElementById("policy-title");
+            const body = document.getElementById("policy-body");
+
+            if (type === "privacy") {
+                title.textContent = "Privacy Policy";
+                body.textContent = "Hum aapki privacy ka poora samman karte hain. Aapka naam, email aur WhatsApp number sirf webinar link, study materials aur class updates bhejne ke liye use kiya jata hai. Hum aapka data kisi third party ko sell ya share nahi karte.";
+            } else if (type === "terms") {
+                title.textContent = "Terms & Conditions";
+                body.textContent = "Yeh 2-hour session sirf educational training ke liye hai. Session ke dauran screen recording ya content redistribution strictly prohibited hai. Hum SEBI registered advisor nahi hain.";
+            } else {
+                title.textContent = "Refund Policy";
+                body.textContent = "Kyunki yeh ek live seat reservation aur instant digital bonus delivery program hai, ₹99 booking fee non-refundable hai. Agar kisi technical wajah se session reschedule hota hai, toh aapko next batch me free transfer milega.";
+            }
+            modal.classList.remove("hidden");
+        }
+
+        function closePolicyModal() {
+            document.getElementById("policy-modal").classList.add("hidden");
+        }
+    </script>
+</body>
+</html>
